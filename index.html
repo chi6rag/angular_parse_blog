@@ -1,0 +1,46 @@
+<html>
+<head>
+  <title>Blog</title>
+  <style type="text/css">
+    [ng:cloak], 
+    [ng-cloak], 
+    [data-ng-cloak], 
+    [x-ng-cloak], 
+    .ng-cloak, 
+    .x-ng-cloak {
+      display: none !important;
+    }
+  </style>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script type="text/javascript" src='https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js'></script>
+  <script type="text/javascript" src='http://code.jquery.com/jquery-1.11.3.min.js'></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+  <script type="text/javascript" src='app.js'></script>
+</head>
+<body ng-app
+      ng-init='articles=[  "this is it",
+                           "lorem ipsum dolor!",
+                           "chirag aggarwal!",
+                           "ravikanth andhavarapu!",
+                           "ibm bluemix!",
+                           "bvs!",
+                        ]' ng-cloak>
+  {{1+2 ? "AngularJS Loads" : "Doesn't Load"}}
+  <div class="container-fluid">
+
+    <!-- div.all-articles -->
+    <div class="all-articles">
+      <div class="col-md-8 col-md-offset-2">
+        <div class="row article" ng-repeat='article in articles'>
+          {{article}}
+        </div>
+      </div>
+    </div>
+    <!-- /div -->
+
+
+  </div>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+</body>
+</html>
